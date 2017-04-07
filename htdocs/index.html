@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="speed-vs-speed-to-market">
+	<head>
+		<title>
+			Speed vs. Speed to Market
+		</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/theme/speed.css">
+		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+		<script>
+			var link = document.createElement("link");
+			link.rel = "stylesheet";
+			link.type = "text/css";
+			link.href = window.location.search.match( /print-pdf/gi ) ? "css/print/pdf.css" : "css/print/paper.css";
+			document.getElementsByTagName("head")[0].appendChild(link);
+		</script>
+	</head>
+	<body class="speed-vs-speed-to-market">
+		<div class="reveal">
+			<!-- Table of Contents
+				[0.0] - Title Card
+			-->
+			<div class="slides">
+				<!-- [0.0] - Title Card -->
+				<section>
+					<img class="title-card" src="img/title.svg" alt="Speed vs. Speed to Market" title="Speed vs. Speed to Market">
+					<h4>
+						Advocating for performance<br>
+						before you go to prod
+					</h4>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{
+						src: "plugin/markdown/marked.js"
+					},
+					{
+						src: "plugin/markdown/markdown.js"
+					},
+					{
+						src: "plugin/notes/notes.js",
+						async: true
+					},
+					{
+						src: "plugin/highlight/highlight.js",
+						async: true,
+						callback: function(){
+							hljs.initHighlightingOnLoad();
+						}
+					}
+				]
+			});
+		</script>
+	</body>
+</html>

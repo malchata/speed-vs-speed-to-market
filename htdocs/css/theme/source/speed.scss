@@ -1,0 +1,81 @@
+/**
+ * Speed vs. Speed to Market talk theme.
+ *
+ * By Jeremy Wagner, https://jeremywagner.me
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #323031;
+$mainColor: #d3d0cb;
+$headingColor: #fdb833;
+
+$mainFontSize: 42px;
+$mainFont: "Oswald", sans-serif;
+$headingFont: "Oswald", sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+// Heading Sizes
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background{
+	&,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6{
+		color: #222;
+	}
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Theme-specific styles here
+.speed-vs-speed-to-market{
+	font-size: 16px;
+}
+
+.reveal{
+	section{
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6{
+			line-height: 1.616;
+		}
+
+		img{
+			border: 0;
+			background: transparent;
+		}
+
+		.title-card{
+			display: block;
+			max-width: percentage(2 / 3);
+			margin: 0 auto 32px;
+			box-shadow: none;
+		}
+	}
+}
