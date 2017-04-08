@@ -4,6 +4,10 @@
  * By Jeremy Wagner, https://jeremywagner.me
  */
 
+// Variables
+$grey: #323031;
+$darkGrey: darken($grey, 5%);
+
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
@@ -13,7 +17,7 @@
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #323031;
+$backgroundColor: $grey;
 $mainColor: #d3d0cb;
 $headingColor: #fdb833;
 
@@ -25,34 +29,34 @@ $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
 $linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 // Heading Sizes
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
-$heading4Size: 1.0em;
-
-section.has-light-background{
-	&,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6{
-		color: #222;
-	}
-}
+$heading4Size: 1em;
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
 
 // Theme-specific styles here
-.speed-vs-speed-to-market{
-	font-size: 16px;
+body{
+	overflow-x: hidden;
+
+	&:before{
+		position: absolute;
+		height: 60%;
+		width: 110%;
+		background: $darkGrey;
+		content: "";
+		display: block;
+		z-index: 1;
+		left: -5%;
+		bottom: -5%;
+	}
 }
 
 .reveal{
@@ -69,13 +73,19 @@ section.has-light-background{
 		img{
 			border: 0;
 			background: transparent;
+			max-width: percentage(2 / 3);
+			box-shadow: 8px 8px 16px rgba(0, 0, 0, .333);
 		}
 
 		.title-card{
+			max-width: 90%;
 			display: block;
-			max-width: percentage(2 / 3);
 			margin: 0 auto 32px;
 			box-shadow: none;
 		}
+	}
+
+	.centered{
+		text-align: center;
 	}
 }
