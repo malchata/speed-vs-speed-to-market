@@ -43,22 +43,6 @@ $heading4Size: 1em;
 // ---------------------------------------------
 
 // Theme-specific styles here
-body{
-	overflow-x: hidden;
-
-	&:before{
-		position: absolute;
-		height: 60%;
-		width: 110%;
-		background: $darkGrey;
-		content: "";
-		display: block;
-		z-index: 1;
-		left: -5%;
-		bottom: -5%;
-	}
-}
-
 .reveal{
 	section{
 		h1,
@@ -67,7 +51,7 @@ body{
 		h4,
 		h5,
 		h6{
-			line-height: 1.616;
+			line-height: 1.2;
 		}
 
 		img{
@@ -81,6 +65,9 @@ body{
 			max-width: 90%;
 			display: block;
 			margin: 0 auto 32px;
+		}
+
+		.no-shadow{
 			box-shadow: none;
 		}
 	}
