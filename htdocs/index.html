@@ -34,12 +34,22 @@
 				[2.0] Web Performance is Hard
 					[2.1] Web Performance is Hard
 					[2.2] The Web is Getting Bloated
-					[2.3] Average Page Sizes Over Time
-					[2.4] How Does This Happen?
-					[2.5] How it All Goes Down
-					[2.6] How Do We Fix This?
-				[3.0] Understanding Your Audience
-					[3.1] Empathize With Your Audience
+					[2.3] Average Page Sizes
+					[2.4] Average Internet Speeds (USA)
+					[2.5] How Does This Happen?
+					[2.6] How it All Goes Down
+					[2.7] How Do We Fix This?
+				[3.0] Championing Performance
+					[3.1] Discuss Performance Proactively
+					[3.2] Whats the Worst That Can Happen?
+					[3.3] Disconnected From our Users
+					[3.4] Crucial Questions
+					[3.5] Who Am I Developing For?
+				[4.0] Developer Convenience vs User Experience
+					[4.1] Developer Convenience vs User Experience
+				[5.0] Test, Measure, Test Again
+					[5.1] Test, Measure, Test Again
+				[6.0] Whence in Prod
 			-->
 			<div class="slides">
 				<!-- [0.0] Title Card -->
@@ -111,13 +121,19 @@
 						<h4>The web is getting</h4>
 						<h1>Bloated</h1>
 					</section>
-					<!-- [2.3] Average Page Sizes Over Time -->
+					<!-- [2.3] Average Page Sizes -->
+					<section>
+						<h4>Average Total Page Sizes vs</h4>
+						<h4 class="invisible">Average Internet Speed (USA)</h4>
+						<img src="img/speed-graph.svg" class="no-shadow">
+					</section>
+					<!-- [2.4] Average Internet Speeds (USA) -->
 					<section>
 						<h4>Average Total Page Sizes vs</h4>
 						<h4>Average Internet Speed (USA)</h4>
-						<img src="img/speed-graph.svg" class="no-shadow">
+						<img src="img/speed-graph-complete.svg" class="no-shadow">
 					</section>
-					<!-- [2.4] How Does This Happen? -->
+					<!-- [2.5] How Does This Happen? -->
 					<section>
 						<h2>How does this happen?</h2>
 						<h3>
@@ -125,7 +141,7 @@
 							<span class="fragment">vs Speed to Market</span>
 						</h3>
 					</section>
-					<!-- [2.5] How it All Goes Down -->
+					<!-- [2.6] How it All Goes Down -->
 					<section>
 						<h2>How it all goes down</h2>
 						<p class="centered fragment">Project funding/contract procured</p>
@@ -137,17 +153,57 @@
 						<p class="centered fragment">Client finds performance problems</p>
 						<p class="centered fragment">Commence gnashing of teeth</p>
 					</section>
-					<!-- [2.6] How Do We Fix This? -->
+					<!-- [2.7] How Do We Fix This? -->
 					<section>
 						<h1>How do we fix this?</h1>
 					</section>
 				</section>
-				<!-- [3.0] Understanding Your Audience -->
+				<!-- [3.0] Championing Performance -->
 				<section>
-					<!-- [3.1] Empathize With Your Audience -->
+					<!-- [3.1] Discuss Performance Proactively -->
 					<section>
-						<h1>Empathize</h1>
-						<h3>With Your Audience</h3>
+						<h3>Discuss Performance</h3>
+						<h1>Proactively</h1>
+					</section>
+					<!-- [3.2] What's the Worst That Can Happen? -->
+					<section>
+						<h3>What's the worst that could happen?</h3>
+						<img class="fragment big" src="img/the-worst.png" alt="The Worst" title="The Worst">
+					</section>
+					<!-- [3.3] Disconnected From our Users -->
+					<section>
+						<h2>We've become</h2>
+						<h1>Disconnected</h1>
+						<h2>From our users</h2>
+					</section>
+					<!-- [3.4] Crucial Questions -->
+					<section>
+						<h2>Crucial questions to ask about your target user:</h2>
+						<p class="centered fragment">&quot;Who am I developing for?&quot;</p>
+						<p class="centered fragment">&quot;What devices do they use?&quot;</p>
+						<p class="centered fragment">&quot;What is internet access like where they live?&quot;</p>
+					</section>
+					<!-- [3.5] Who Am I Developing For? -->
+					<section>
+						<h2>&quot;Who am I Developing For?&quot;</h2>
+					</section>
+				</section>
+				<!-- [4.0] Developer Convenience vs User Experience -->
+				<section>
+					<!-- [4.1] Developer Convenience vs User Experience -->
+					<section>
+						<h2>Developer Convenience</h2>
+						<h3>vs</h3>
+						<h2>The User Experience</h2>
+					</section>
+				</section>
+				<!-- [5.0] Test, Measure, Test Again -->
+				<section>
+					<!-- [5.1] Test, Measure, Test Again -->
+					<section>
+						<h3>Test,</h3>
+						<h1>Measure,</h1>
+						<h3>Test Again</h3>
 					</section>
 				</section>
 			</div>
@@ -159,6 +215,7 @@
 			Reveal.initialize({
 				history: true,
 				controls: false,
+				transition: "fade",
 				//progress: false
 
 				// More info https://github.com/hakimel/reveal.js#dependencies

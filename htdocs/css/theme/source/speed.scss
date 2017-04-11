@@ -43,6 +43,11 @@ $heading4Size: 1em;
 // ---------------------------------------------
 
 // Theme-specific styles here
+.speed-vs-speed-to-market{
+	background-image: url("/img/bg.svg");
+	background-size: 123px 150px;
+}
+
 .reveal{
 	section{
 		h1,
@@ -61,6 +66,11 @@ $heading4Size: 1em;
 			box-shadow: 8px 8px 16px rgba(0, 0, 0, .333);
 		}
 
+		.big{
+			width: 100%;
+			max-width: none;
+		}
+
 		.title-card{
 			max-width: 90%;
 			display: block;
@@ -70,9 +80,13 @@ $heading4Size: 1em;
 		.no-shadow{
 			box-shadow: none;
 		}
-	}
 
-	.centered{
-		text-align: center;
+		.centered{
+			text-align: center;
+		}
+
+		.invisible{
+			visibility: hidden;
+		}
 	}
 }

@@ -29,12 +29,21 @@ const buildCSS = ()=>{
 		.pipe(livereload());
 };
 
-exports.buildCSS = buildCSS;
+// HTML Task (Triggers Reloading Only)
+const reloadPage = ()=>{
+	let src = "htdocs/index.html";
+
+	return gulp.src(src)
+		.pipe(livereload());
+};
+
+exports.reloadPage = reloadPage;
 
 // Watch Task
 const watch = ()=>{
 	livereload.listen();
 	gulp.watch("htdocs/css/**/*.scss", buildCSS);
+	gulp.watch("htdocs/index.html", reloadPage);
 };
 
 exports.default = watch;
