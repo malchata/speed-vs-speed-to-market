@@ -59,11 +59,21 @@ $heading4Size: 1em;
 			line-height: 1.2;
 		}
 
-		img{
+		img,
+		video{
 			border: 0;
 			background: transparent;
 			max-width: percentage(2 / 3);
 			box-shadow: 8px 8px 16px rgba(0, 0, 0, .333);
+		}
+
+		video{
+			max-width: 85%;
+			width: 100%;
+
+			& + h4{
+				margin-top: 16px;
+			}
 		}
 
 		.big{
@@ -87,6 +97,18 @@ $heading4Size: 1em;
 
 		.invisible{
 			visibility: hidden;
+		}
+
+		.flex-image-container{
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			align-content: flex-start;
+
+			> *{
+				width: 48.75%;
+				height: auto;
+			}
 		}
 	}
 }
