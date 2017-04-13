@@ -7,6 +7,7 @@
 // Variables
 $grey: #323031;
 $darkGrey: darken($grey, 5%);
+$blue: #3f88c5;
 
 // Default mixins and settings -----------------
 @import "../template/mixins";
@@ -108,6 +109,45 @@ $heading4Size: 1em;
 			> *{
 				width: 48.75%;
 				height: auto;
+			}
+		}
+
+		.graph-container{
+			.graph-row{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin: 0 0 .375em;
+
+				.graph-label{
+					color: $mainColor;
+					font-family: monospace;
+					width: 15%;
+					font: .625em/1 monospace;
+					text-align: left;
+					margin-right: 1.25%;
+
+					&:last-child{
+						width: 10%;
+						margin-left: 1.25%;
+					}
+				}
+
+				.graph-bar-container{
+					height: 1.125em;
+					width: 72.5%;
+					background: lighten($grey, 2.5%);
+					position: relative;
+
+					.graph-bar{
+						background: $blue;
+						height: 1.125em;
+						position: absolute;
+						top: 0;
+						border-right: 4px solid darken($blue, 20%);
+						box-sizing: border-box;
+					}
+				}
 			}
 		}
 	}

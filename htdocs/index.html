@@ -52,8 +52,9 @@
 					[3.10] Mobile May be Slower Than You Think
 					[3.11] Make Data-driven Decisions
 					[3.12] Connectivity Index
-				[4.0] Developer Convenience vs User Experience
+				[4.0] Limit Developer Conveniences
 					[4.1] Developer Convenience vs User Experience
+					[4.2] Said Better by Estelle
 				[5.0] Test, Measure, Test Again
 					[5.1] Test, Measure, Test Again
 			-->
@@ -248,6 +249,178 @@
 						<h2>Developer Convenience</h2>
 						<h3>vs</h3>
 						<h2>The User Experience</h2>
+					</section>
+					<!-- [4.2] Said Better by Estelle Weyl -->
+					<section>
+						<img src="img/estelle_tweet.png" alt="Said Better by Estelle Weyl" title="Said Better by Estelle Weyl">
+					</section>
+					<!-- [4.3] CSS Framework Overhead -->
+					<section>
+						<h3>CSS Framework Overhead</h3>
+						<div class="graph-container">
+							<div class="graph-row">
+								<div class="graph-label">
+									Bootstrap
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 54.4511668107%; left: 0;">
+									</div>
+								</div>
+								<div class="graph-label">
+									18.9 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									Foundation
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 34.8602708153%; left: 54.4511668107%;">
+									</div>
+								</div>
+								<div class="graph-label">
+									12.1 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									Skeleton
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 6.626332469%; right: 4.0622299049%;">
+									</div>
+								</div>
+								<div class="graph-label">
+									2.3 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									Normalize
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 2.6793431288%; right: 1.3828867761%">
+									</div>
+								</div>
+								<div class="graph-label">
+									0.93 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									Meyer Reset
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 1.3828867761%; right: 0%;">
+									</div>
+								</div>
+								<div class="graph-label">
+									0.48 KB
+								</div>
+							</div>
+						</div>
+						<h4>All Sizes Minified+gzip</h4>
+					</section>
+					<!-- [4.4] JS Framework Overhead -->
+					<section>
+						<h3>JS Framework Overhead</h3>
+						<div class="graph-container">
+							<div class="graph-row">
+								<div class="graph-label">
+									Angular
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 32.8725961538%; left: 0;">
+									</div>
+								</div>
+								<div class="graph-label">
+									54.7 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									React
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 23.4375%; left: 32.8725961538%;">
+									</div>
+								</div>
+								<div class="graph-label">
+									39.0 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									jQuery
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 17.7884615385%; left: 56.3100961538%;">
+									</div>
+								</div>
+								<div class="graph-label">
+									29.6 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									Foundation
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 16.6466346154%; right: 9.2548076923%;">
+									</div>
+								</div>
+								<div class="graph-label">
+									27.7 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									Bootstrap
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 7.2716346154%; right: 1.9831730769%;">
+									</div>
+								</div>
+								<div class="graph-label">
+									12.1 KB
+								</div>
+							</div>
+							<div class="graph-row">
+								<div class="graph-label">
+									Preact
+								</div>
+								<div class="graph-bar-container">
+									<div class="graph-bar" style="width: 1.9831730769%; right: 0;">
+									</div>
+								</div>
+								<div class="graph-label">
+									3.3 KB
+								</div>
+							</div>
+						</div>
+						<h4>All Sizes Minified+gzip</h4>
+					</section>
+					<!-- [4.5] Parsing Time Matters, Too -->
+					<section>
+						<h3>It's not just about file size...</h3>
+						<h1>...Parsing time matters, too.</h1>
+					</section>
+					<!-- [4.6] Ask Yourself... -->
+					<section>
+						<h2>Ask yourself...</h2>
+						<p class="centered fragment">Am I reimplementing what the browser already does?</p>
+						<p class="centered fragment">Am I overengineering a solution?</p>
+						<p class="centered fragment">Do I need [JS library] when in-browser methods exist?</p>
+						<p class="centered fragment">Do I need a CSS framework?</p>
+					</section>
+					<!-- [4.7] If You Insist... -->
+					<section>
+						<h2>If you insist on a library/framework</h2>
+						<p class="centered fragment">See if smaller equivalents are available (e.g., Zepto, Preact, et cetera)</p>
+						<p class="centered fragment">Customize it if possible (Bootstrap, Foundation, et cetera)</p>
+						<p class="centered fragment">Ensure it adds value to users, not just developers</p>
+						<p class="centered fragment">Ensure it doesn't kill the user experience</p>
+						<p class="centered fragment">Ensure your site fails reasonably well without it (can you curl it?)</p>
 					</section>
 				</section>
 				<!-- [5.0] Test, Measure, Test Again -->
