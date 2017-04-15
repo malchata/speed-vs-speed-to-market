@@ -55,8 +55,15 @@
 				[4.0] Limit Developer Conveniences
 					[4.1] Developer Convenience vs User Experience
 					[4.2] Said Better by Estelle
-				[5.0] Test, Measure, Test Again
-					[5.1] Test, Measure, Test Again
+					[4.3] JS Framework Overhead
+					[4.4] JS Framework Overhead
+				[5.0] Performance Measurement
+					[5.1] For Good Measure...
+					[5.2] Performance Problems are Invisible in Development
+					[5.3] Tips for Testing
+					[5.4] Dev Testing (Easy Mode)
+					[5.5] Dev Testing (Normal Mode)
+					[5.6] Dev Testing (Hard Mode)
 			-->
 			<div class="slides">
 				<!-- [0.0] Title Card -->
@@ -416,20 +423,50 @@
 					<!-- [4.7] If You Insist... -->
 					<section>
 						<h2>If you insist on a library/framework</h2>
-						<p class="centered fragment">See if smaller equivalents are available (e.g., Zepto, Preact, et cetera)</p>
-						<p class="centered fragment">Customize it if possible (Bootstrap, Foundation, et cetera)</p>
-						<p class="centered fragment">Ensure it adds value to users, not just developers</p>
-						<p class="centered fragment">Ensure it doesn't kill the user experience</p>
+						<p class="centered fragment">Look for smaller API-compatible options (e.g., Zepto, Preact)</p>
+						<p class="centered fragment">Customize it if possible (e.g., Bootstrap, Modernizr)</p>
+						<p class="centered fragment">Ensure it adds value for users, not just developers</p>
 						<p class="centered fragment">Ensure your site fails reasonably well without it (can you curl it?)</p>
 					</section>
 				</section>
-				<!-- [5.0] Test, Measure, Test Again -->
+				<!-- [5.0] Performance Measurement -->
 				<section>
-					<!-- [5.1] Test, Measure, Test Again -->
+					<!-- [5.1] For Good Measure... -->
 					<section>
-						<h3>Test,</h3>
-						<h1>Measure,</h1>
-						<h3>Test Again</h3>
+						<h3>For good measure...</h3>
+						<h2>Measure performance!</h2>
+					</section>
+					<!-- [5.2] Performance Problems are Invisible in Development -->
+					<section>
+						<h3>Performance problems</h3>
+						<h1>are invisible</h1>
+						<h3>in development</h3>
+					</section>
+					<!-- [5.3] Tips for Testing -->
+					<section>
+						<h2>Testing Tips</h2>
+						<p class="centered fragment">Test multiple times in a session to build average metrics</p>
+						<p class="centered fragment">Use a throttling profile to simulate actual connections</p>
+						<p class="centered fragment">Build a throttling profile that resembles your users</p>
+					</section>
+					<!-- [5.4] Dev Testing (Easy Mode) -->
+					<section>
+						<h3>Dev Testing (Easy Mode)</h3>
+						<img class="smaller" src="img/dev-tools.png" alt="Chrome Dev Tools" title="Chrome Dev Tools">
+						<h4>Chrome Dev Tools</h4>
+					</section>
+					<!-- [5.5] Dev Testing (Normal Mode) -->
+					<section>
+						<h3>Dev Testing (Normal Mode)</h3>
+<pre><code class="bash">npm install -g sitespeed.io
+sitespeed.io -b chrome -n 25 -d 1 -m 1 -c custom --latency 50 --downstreamKbps 750 --upstreamKbps 250 https://cindex.co</code></pre>
+						<h4>sitespeed.io</h4>
+					</section>
+					<!-- [5.6] Dev Testing (Hard Mode) -->
+					<section>
+						<h3>Dev Testing (Hard Mode)</h3>
+						<img src="img/grafana.png" alt="Grafana" title="Grafana">
+						<h4>sitespeed.io + Graphite + Grafana</h4>
 					</section>
 				</section>
 			</div>
@@ -437,14 +474,12 @@
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
 				controls: false,
 				transition: "fade",
-				//progress: false
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
+				progress: false,
+				help: false,
 				dependencies: [
 					{
 						src: "plugin/markdown/marked.js"
