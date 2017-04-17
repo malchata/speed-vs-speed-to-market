@@ -4,24 +4,23 @@
  * By Jeremy Wagner, https://jeremywagner.me
  */
 
+ // Default mixins and settings -----------------
+ @import "../template/mixins";
+ @import "../template/settings";
+ // ---------------------------------------------
+
+// Font imports
+@import "fonts.scss";
+
 // Variables
 $grey: #323031;
 $darkGrey: darken($grey, 5%);
 $blue: #3f88c5;
 
-// Default mixins and settings -----------------
-@import "../template/mixins";
-@import "../template/settings";
-// ---------------------------------------------
-
-// Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-
-// Override theme settings (see ../template/settings.scss)
+// Theme overrides
 $backgroundColor: $grey;
 $mainColor: #d3d0cb;
 $headingColor: #fdb833;
-
 $mainFontSize: 42px;
 $mainFont: "Oswald", sans-serif;
 $headingFont: "Oswald", sans-serif;
@@ -38,6 +37,8 @@ $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1em;
+$heading5Size: .8em;
+$heading6Size: .6em;
 
 // Theme template ------------------------------
 @import "../template/theme";
@@ -67,10 +68,27 @@ $heading4Size: 1em;
 		h5,
 		h6{
 			line-height: 1.2;
+			font-weight: 600;
 		}
 
-		h4{
+		h4,
+		h5,
+		h6{
 			font-weight: 400;
+		}
+
+		h3{
+			& + .fragment{
+				margin: 1em 0 0;
+			}
+		}
+
+		h5{
+			font-size: $heading5Size;
+		}
+
+		h6{
+			font-size: $heading6Size;
 		}
 
 		img,
@@ -103,6 +121,10 @@ $heading4Size: 1em;
 			max-width: 90%;
 			display: block;
 			margin: 0 auto 32px;
+
+			& + *{
+				margin: 1em 0 0;
+			}
 		}
 
 		.no-shadow{

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="speed-vs-speed-to-market">
+<html lang="en">
 	<head>
 		<title>
 			Speed vs. Speed to Market
@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 		<link rel="stylesheet" href="css/theme/speed.css">
-		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
 		<script>
 			var link = document.createElement("link");
 			link.rel = "stylesheet";
@@ -33,12 +32,11 @@
 					[1.9] Teamwork Saves the Day
 				[2.0] Web Performance is Hard
 					[2.1] Web Performance is Hard
-					[2.2] The Web is Getting Bloated
-					[2.3] Average Page Sizes
-					[2.4] Average Internet Speeds (USA)
-					[2.5] How Does This Happen?
-					[2.6] How it All Goes Down
-					[2.7] How Do We Fix This?
+					[2.2] Average Page Sizes
+					[2.3] Average Internet Speeds (USA)
+					[2.4] How Does This Happen?
+					[2.5] How it All Goes Down
+					[2.6] How Do We Fix This?
 				[3.0] Championing Performance
 					[3.1] Discuss Performance Proactively
 					[3.2] What's the Worst That Can Happen?
@@ -55,8 +53,8 @@
 				[4.0] Limit Developer Conveniences
 					[4.1] Developer Convenience vs User Experience
 					[4.2] Said Better by Estelle
-					[4.3] JS Framework Overhead
-					[4.4] JS Framework Overhead
+					[4.3] CSS Framework Overhead
+					[4.4] JS Library Overhead
 				[5.0] Performance Measurement
 					[5.1] For Good Measure...
 					[5.2] Performance Problems are Invisible in Development
@@ -65,13 +63,27 @@
 					[5.5] Dev Testing (Normal Mode)
 					[5.6] Dev Testing (Hard Mode)
 				[6.0] When in Prod
+					[6.1] Help! I'm in Prod!
+					[6.2] Optimize Images!
+					[6.3] A Quick Image Optimization Test Case Pt. I
+					[6.4] A Quick Image Optimization Test Case Pt. II
+					[6.5] A Quick Image Optimization Test Case Pt. III
+					[6.6] Use Resource Hints
+					[6.7] Prune Your CSS
+					[6.8] Segment Your CSS
+					[6.9] Check Code Coverage
 				[7.0] Conclusion
-					[7.1]
+					[7.1] You Probably Won't Fix Everything Overnight
+					[7.2] Resources Pt. I
+					[7.3] Resources Pt. II
+					[7.4] Resources Pt. III
+					[7.5] The End
 			-->
 			<div class="slides">
 				<!-- [0.0] Title Card -->
 				<section>
 					<img class="no-shadow title-card" src="img/title.svg" alt="Speed vs. Speed to Market" title="Speed vs. Speed to Market">
+					<h5>twitter: <a href="https://twitter.com/malchata" target="_blank" rel="noopener">@malchata</a>&nbsp;&nbsp;|&nbsp;&nbsp;Blog: <a href="https://jeremywagner.me" target="_blank" rel="noopener">jeremywagner.me</a></h5>
 				</section>
 				<!-- [1.0] Hornets and Japanese Honeybees -->
 				<section>
@@ -133,24 +145,19 @@
 						<h3>Web performance</h3>
 						<h1>is hard</h1>
 					</section>
-					<!-- [2.2] The Web is Getting Bloated -->
-					<section>
-						<h4>The web is getting</h4>
-						<h1>Bloated</h1>
-					</section>
-					<!-- [2.3] Average Page Sizes -->
+					<!-- [2.2] Average Page Sizes -->
 					<section>
 						<h4>Average Total Page Sizes<span class="invisible"> vs</span></h4>
 						<h4 class="invisible">Average Internet Speed (USA)</h4>
 						<img src="img/speed-graph.svg" class="no-shadow">
 					</section>
-					<!-- [2.4] Average Internet Speeds (USA) -->
+					<!-- [2.3] Average Internet Speeds (USA) -->
 					<section>
 						<h4>Average Total Page Sizes vs</h4>
 						<h4>Average Internet Speed (USA)</h4>
 						<img src="img/speed-graph-complete.svg" class="no-shadow">
 					</section>
-					<!-- [2.5] How Does This Happen? -->
+					<!-- [2.4] How Does This Happen? -->
 					<section>
 						<h2>How does this happen?</h2>
 						<h3>
@@ -158,7 +165,7 @@
 							<span class="fragment">vs Speed to Market</span>
 						</h3>
 					</section>
-					<!-- [2.6] How it All Goes Down -->
+					<!-- [2.5] How it All Goes Down -->
 					<section>
 						<h2>How it all goes down</h2>
 						<p class="centered fragment">Project funding/contract procured</p>
@@ -170,7 +177,7 @@
 						<p class="centered fragment">Client finds performance problems</p>
 						<p class="centered fragment">Commence gnashing of teeth</p>
 					</section>
-					<!-- [2.7] How Do We Fix This? -->
+					<!-- [2.6] How Do We Fix This? -->
 					<section>
 						<h1>How do we fix this?</h1>
 					</section>
@@ -185,8 +192,10 @@
 					<!-- [3.2] What's the Worst That Can Happen? -->
 					<section>
 						<h3>What's the worst that could happen?</h3>
-						<img class="fragment big" src="img/the-worst.png" alt="The Worst" title="The Worst">
-						<img class="fragment" src="img/the-worst-pt-2.png" alt="The Worst Pt. II" title="The Worst Part. II">
+						<div class="fragment">
+							<img class="big" src="img/the-worst.png" alt="The Worst" title="The Worst">
+							<img src="img/the-worst-pt-2.png" alt="The Worst Pt. II" title="The Worst Part. II">
+						</div>
 					</section>
 					<!-- [3.3] Web Performance is a User Experience Problem -->
 					<section>
@@ -240,7 +249,6 @@
 					<section>
 						<h2>Make Data-driven Decisions</h2>
 						<p class="centered fragment">Google Analytics</p>
-						<p class="centered fragment">StatCounter Global Stats</p>
 						<p class="centered fragment">HTTP Archive</p>
 						<p class="centered fragment">Akamai State of the Internet Connectivity Report</p>
 					</section>
@@ -249,7 +257,7 @@
 						<video autoplay loop muted preload>
 							<source src="video/cindex.webm" type="video/webm">
 						</video>
-						<h4>https://cindex.co</h4>
+						<h4><a href="https://cindex.co" target="_blank" rel="noopener">cindex.co</a></h4>
 					</section>
 				</section>
 				<!-- [4.0] Developer Convenience vs User Experience -->
@@ -331,9 +339,9 @@
 						</div>
 						<h4>All Sizes Minified+gzip</h4>
 					</section>
-					<!-- [4.4] JS Framework Overhead -->
+					<!-- [4.4] JS Library Overhead -->
 					<section>
-						<h3>JS Framework Overhead</h3>
+						<h3>JS Library Overhead</h3>
 						<div class="graph-container">
 							<div class="graph-row">
 								<div class="graph-label">
@@ -412,24 +420,23 @@
 					</section>
 					<!-- [4.5] Parsing Time Matters, Too -->
 					<section>
-						<h3>It's not just about file size...</h3>
-						<h1>...Parsing time matters, too.</h1>
+						<h3>It's not just about file size</h3>
+						<h1>Parse time<br>matters, too!</h1>
 					</section>
-					<!-- [4.6] Ask Yourself... -->
+					<!-- [4.6] Ask Yourself -->
 					<section>
-						<h2>Ask yourself...</h2>
-						<p class="centered fragment">Am I reimplementing what the browser already does?</p>
+						<h2>Ask yourself</h2>
 						<p class="centered fragment">Am I overengineering a solution?</p>
 						<p class="centered fragment">Do I need [JS library] when in-browser methods exist?</p>
-						<p class="centered fragment">Do I need a CSS framework?</p>
+						<p class="centered fragment">Do I even need a CSS framework?</p>
 					</section>
 					<!-- [4.7] If You Insist... -->
 					<section>
 						<h2>If you insist on a library/framework</h2>
 						<p class="centered fragment">Look for smaller API-compatible options (e.g., Zepto, Preact)</p>
-						<p class="centered fragment">Customize it if possible (e.g., Bootstrap, Modernizr)</p>
-						<p class="centered fragment">Ensure it adds value for users, not just developers</p>
-						<p class="centered fragment">Ensure your site fails reasonably well without it (can you curl it?)</p>
+						<p class="centered fragment">Customize if possible (e.g., Bootstrap, Modernizr)</p>
+						<p class="centered fragment">Ensure it adds value for users, not just for you</p>
+						<p class="centered fragment">Ensure your site fails well without it (can you curl it?)</p>
 					</section>
 				</section>
 				<!-- [5.0] Performance Measurement -->
@@ -450,7 +457,6 @@
 						<h2>Testing Tips</h2>
 						<p class="centered fragment">Test multiple times in a session to build average metrics</p>
 						<p class="centered fragment">Use a throttling profile to simulate actual connections</p>
-						<p class="centered fragment">Build a throttling profile that resembles your users</p>
 						<p class="centered fragment">Build throttling profiles based on real data</p>
 					</section>
 					<!-- [5.4] Dev Testing (Easy Mode) -->
@@ -496,18 +502,18 @@ sitespeed.io -b chrome -n 25 -d 1 -m 1 -c custom --latency 50 --downstreamKbps 7
 						</div>
 					</section>
 				</section>
-				<!-- [6.0] Quick Wins in Prod -->
+				<!-- [6.0] When in Prod -->
 				<section>
-					<!-- [6.1] I'm in Prod and Everything's Slow! -->
+					<!-- [6.1] Help! I'm in Prod! -->
 					<section>
-						<h4>I'm in prod and everything's slow.</h4>
-						<h1>Now what?</h1>
+						<h1>Help!</h1>
+						<h3>I'm in prod!</h3>
 					</section>
 					<!-- [6.2] Optimize Images! -->
 					<section>
 						<h2>Optimize Images!</h2>
 						<h3>Simple bulk image optimization in bash</h3>
-						<div class="fragment" style="margin: 1em 0 0;">
+						<div class="fragment">
 							<h4>Optimize JPEGs (jpeg-recompress)</h4>
 <pre><code class="bash">npm install -g jpeg-recompress-bin
 find ./ -type f -name '*.jpg' -exec jpeg-recompress {} {} \;</code></pre>
@@ -562,34 +568,97 @@ find ./ -type f -name '*.svg' -exec svgo {} \;</code></pre>
 							<p class="centered">Give the browser a head start on loading assets with <code>preload</code>:</p>
 							<pre><code class="http">Link: &lt;/css/styles.css&gt;; rel=preload; as=style</code></pre>
 						</div>
-						<h4 class="fragment">Learn more: <a href="https://w3c.github.io/resource-hints" target="_blank" rel="noopener">https://w3c.github.io/resource-hints</a></h4>
 					</section>
 					<!-- [6.7] Prune Your CSS -->
 					<section>
 						<h2>Prune your CSS</h2>
 						<div class="fragment">
-							<p class="centered">Use cssnano to optimize your CSS:</p>
+							<p class="centered">Go beyond mere minification with cssnano:</p>
 							<pre><code class="bash">npm install -g cssnano-cli
 cssnano styles.css styles.optimized.css</code></pre>
 						</div>
 						<div class="fragment">
-							<p class="centered">Use csscss to find redundancies:</p>
+							<p class="centered">Find redundancies with csscss:</p>
 							<pre><code class="bash">gem install csscss
 csscss --verbose --no-match-shorthand styles.css</code></pre>
 						</div>
 					</section>
-					<!-- [6.8] Check Code Coverage -->
+					<!-- [6.8] Segment Your CSS -->
+					<section>
+						<h2>Segment your CSS</h2>
+						<p class="centered fragment">Large, monolithic stylesheets are perfect candidates</p>
+						<p class="centered fragment">Keep one stylesheet with global CSS and place template-specific CSS into separate style sheets</p>
+						<p class="centered fragment">If only one instance of a specific template exists, considering inlining its CSS</p>
+						<img class="fragment" src="img/segment-css.png" alt="Segmented CSS" title="Segmented CSS">
+					</section>
+					<!-- [6.9] Check Code Coverage -->
 					<section>
 						<h2>Check Code Coverage</h2>
-						<h4>Chrome Dev Tools</h4>
+						<h4>with Chrome Dev Tools</h4>
 						<img class="big fragment" src="img/coverage-summary.png">
 						<img class="fragment" src="img/coverage-deep-dive.png">
 					</section>
 				</section>
-				<!-- [7.0] -->
+				<!-- [7.0] Conclusion -->
 				<section>
-					<!-- [7.1] -->
+					<!-- [7.1] You Probably Won't Fix Everything Overnight -->
 					<section>
+						<h4>You probably won't fix everything</h4>
+						<h1>overnight</h1>
+					</section>
+					<!-- [7.2] Resources Pt. I -->
+					<section>
+						<h2>Resources</h2>
+						<p class="centered fragment">
+							More about Giant Hornets:<br>
+							<a href="https://a-z-animals.com/animals/asian-giant-hornet/" target="_blank" rel="noopener">a-z-animals.com/animals/asian-giant-hornet</a>
+						</p>
+						<p class="centered fragment">
+							Connectivity Index:<br>
+							<a href="https://cindex.co" target="_blank" rel="noopener">cindex.co</a>
+						</p>
+						<p class="centered fragment">
+							Akamai State of the Internet Reports:<br>
+							<a href="https://www.akamai.com/us/en/about/our-thinking/state-of-the-internet-report/" target="_blank" rel="noopener">akamai.com/us/en/about/our-thinking/state-of-the-internet-report</a>
+						</p>
+					</section>
+					<!-- [7.3] Resources Pt. II -->
+					<section>
+						<h2>More resources</h2>
+						<p class="centered fragment">
+							sitespeed.io:<br>
+							<a href="https://www.sitespeed.io" target="_blank" rel="noopener">sitespeed.io</a>
+						</p>
+						<p class="centered fragment">
+							Bulk image optimization in bash:<br>
+							<a href="https://jeremywagner.me/blog/bulk-image-optimization-in-bash" target="_blank" rel="noopener">jeremywagner.me/blog/bulk-image-optimization-in-bash</a>
+						</p>
+						<p class="centered fragment">
+							Resource hints specification:<br>
+							<a href="https://w3c.github.io/resource-hints/" target="_blank" rel="noopener">w3c.github.io/resource-hints</a>
+						</p>
+					</section>
+					<!-- [7.4] Resources Pt. III -->
+					<section>
+						<h2>Even more resources</h2>
+						<p class="centered fragment">
+							Speed vs. Speed to Market (Performance Calendar):<br>
+							<a href="https://calendar.perfplanet.com/2016/speed-versus-speed-to-market/" target="_blank" rel="noopener">calendar.perfplanet.com/2016/speed-versus-speed-to-market</a>
+						</p>
+						<p class="centered fragment">
+							Talk slides:<br>
+							<a href="https://github.com/malchata/speed-vs-speed-to-market" target="_blank" rel="noopener">github.com/malchata/speed-vs-speed-to-market</a>
+						</p>
+						<p class="centered fragment">
+							Web Performance in Action:<br>
+							<a href="https://www.manning.com/wagner" target="_blank" rel="noopener">manning.com/wagner</a>
+						</p>
+					</section>
+					<!-- [7.5] The End -->
+					<section>
+						<h1>The End</h1>
+						<h4>Thank you!</h4>
+						<h5>twitter: <a href="https://twitter.com/malchata" target="_blank" rel="noopener">@malchata</a>&nbsp;&nbsp;|&nbsp;&nbsp;Blog: <a href="https://jeremywagner.me" target="_blank" rel="noopener">jeremywagner.me</a></h5>
 					</section>
 				</section>
 			</div>
