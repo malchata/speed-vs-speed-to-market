@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="speed-vs-speed-to-market">
+<html lang="en" class="speed-vs-speed-to-market">
 	<head>
 		<title>
 			Speed vs. Speed to Market
@@ -64,6 +64,9 @@
 					[5.4] Dev Testing (Easy Mode)
 					[5.5] Dev Testing (Normal Mode)
 					[5.6] Dev Testing (Hard Mode)
+				[6.0] When in Prod
+				[7.0] Conclusion
+					[7.1]
 			-->
 			<div class="slides">
 				<!-- [0.0] Title Card -->
@@ -137,7 +140,7 @@
 					</section>
 					<!-- [2.3] Average Page Sizes -->
 					<section>
-						<h4>Average Total Page Sizes vs</h4>
+						<h4>Average Total Page Sizes<span class="invisible"> vs</span></h4>
 						<h4 class="invisible">Average Internet Speed (USA)</h4>
 						<img src="img/speed-graph.svg" class="no-shadow">
 					</section>
@@ -448,6 +451,7 @@
 						<p class="centered fragment">Test multiple times in a session to build average metrics</p>
 						<p class="centered fragment">Use a throttling profile to simulate actual connections</p>
 						<p class="centered fragment">Build a throttling profile that resembles your users</p>
+						<p class="centered fragment">Build throttling profiles based on real data</p>
 					</section>
 					<!-- [5.4] Dev Testing (Easy Mode) -->
 					<section>
@@ -458,15 +462,134 @@
 					<!-- [5.5] Dev Testing (Normal Mode) -->
 					<section>
 						<h3>Dev Testing (Normal Mode)</h3>
-<pre><code class="bash">npm install -g sitespeed.io
+						<pre><code class="bash">npm install -g sitespeed.io
 sitespeed.io -b chrome -n 25 -d 1 -m 1 -c custom --latency 50 --downstreamKbps 750 --upstreamKbps 250 https://cindex.co</code></pre>
 						<h4>sitespeed.io</h4>
 					</section>
 					<!-- [5.6] Dev Testing (Hard Mode) -->
 					<section>
 						<h3>Dev Testing (Hard Mode)</h3>
-						<img src="img/grafana.png" alt="Grafana" title="Grafana">
+						<img class="big" src="img/grafana.png" alt="Grafana" title="Grafana">
 						<h4>sitespeed.io + Graphite + Grafana</h4>
+					</section>
+					<!-- [5.7] Real User Monitoring -->
+					<section>
+						<h3>Resource/Navigation Timing APIs</h3>
+						<p class="centered">Exposes resource timings in the browser</p>
+						<p class="centered">Available in <code>window.performance</code></p>
+						<p class="centered">Use the Navigation Timing API for page timings</p>
+						<p class="centered">Use the Resource Timing API for asset timings</p>
+						<p class="centered">Beacon timing data to a server for collection</p>
+					</section>
+					<!-- [5.8] Resource Timing Support -->
+					<section>
+						<h2>Browser Support</h2>
+						<div class="flex-image-container extra-wide">
+							<div>
+								<img class="big" src="img/navigation-timing-api.png" alt="Navigation Timing API" title="Navigation Timing API">
+								<h4>Navigation Timing API</h4>
+							</div>
+							<div>
+								<img class="big" src="img/resource-timing-api.png" alt="Resource Timing API" title="Resource Timing API">
+								<h4>Resource Timing API</h4>
+							</div>
+						</div>
+					</section>
+				</section>
+				<!-- [6.0] Quick Wins in Prod -->
+				<section>
+					<!-- [6.1] I'm in Prod and Everything's Slow! -->
+					<section>
+						<h4>I'm in prod and everything's slow.</h4>
+						<h1>Now what?</h1>
+					</section>
+					<!-- [6.2] Optimize Images! -->
+					<section>
+						<h2>Optimize Images!</h2>
+						<h3>Simple bulk image optimization in bash</h3>
+						<div class="fragment" style="margin: 1em 0 0;">
+							<h4>Optimize JPEGs (jpeg-recompress)</h4>
+<pre><code class="bash">npm install -g jpeg-recompress-bin
+find ./ -type f -name '*.jpg' -exec jpeg-recompress {} {} \;</code></pre>
+						</div>
+						<div class="fragment">
+							<h4>Optimize PNGs (optipng)</h4>
+<pre><code class="bash">npm install -g optipng-bin
+find ./ -type f -name '*.png' -exec optipng {} \;</code></pre>
+						</div>
+						<div class="fragment">
+							<h4>Optimize SVGs (svgo)</h4>
+<pre><code class="bash">npm install -g svgo
+find ./ -type f -name '*.svg' -exec svgo {} \;</code></pre>
+						</div>
+					</section>
+					<!-- [6.3] A Quick Image Optimization Test Case Pt. I -->
+					<section>
+						<h3>A Quick Test Case:</h3>
+						<p class="centered fragment">A Wordpress-powered recipe website with <u>493</u> JPEG images (36.5 MB total)</p>
+						<pre class="fragment" style="margin: 2rem auto;"><code class="bash">find ./ -type f -name '*.jpg' -exec jpeg-recompress --min 30 --max 70 --strip --method smallfry --loops 12 --accurate {} {} \;</code></pre>
+						<p class="centered fragment">with jpeg-recompress, image library size was reduced <u>72%</u> to <u>10.2 MB</u> in approximately <u>3 minutes</u> of CPU time</p>
+					</section>
+					<!-- [6.4] A Quick Image Optimization Test Case Pt. II -->
+					<section>
+						<h3>Quality differences were negligible</h3>
+						<div class="flex-image-container">
+							<div>
+								<h4>Unoptimized</h4>
+								<img src="img/image-test-case-unoptimized.jpg" alt="Unoptimized Image Test Case" title="Unoptimized Image Test Case">
+								<h4>182 KB</h4>
+							</div>
+							<div>
+								<h4>Optimized</h4>
+								<img src="img/image-test-case-optimized.jpg" alt="Optimized Image Test Case" title="Optimized Image Test Case">
+								<h4>25 KB (-86%)</h4>
+							</div>
+						</div>
+					</section>
+					<!-- [6.5] A Quick Image Optimization Test Case Pt. III -->
+					<section>
+						<h3>Image Optimization <u>Works</u></h3>
+						<img class="big" src="img/image-test-case-result.png" alt="Results of Image Optimization in Test Case" title="Results of Image Optimization in Test Case">
+					</section>
+					<!-- [6.6] Use Resource Hints -->
+					<section>
+						<h2>Use Resource Hints</h2>
+						<div class="fragment">
+							<p class="centered">Use <code>preconnect</code> to open connections to other servers ahead of time:</p>
+							<pre><code class="http">Link: &lt;https://cdnjs.com&gt;; rel=preconnect; crossorigin</code></pre>
+						</div>
+						<div class="fragment">
+							<p class="centered">Give the browser a head start on loading assets with <code>preload</code>:</p>
+							<pre><code class="http">Link: &lt;/css/styles.css&gt;; rel=preload; as=style</code></pre>
+						</div>
+						<h4 class="fragment">Learn more: <a href="https://w3c.github.io/resource-hints" target="_blank" rel="noopener">https://w3c.github.io/resource-hints</a></h4>
+					</section>
+					<!-- [6.7] Prune Your CSS -->
+					<section>
+						<h2>Prune your CSS</h2>
+						<div class="fragment">
+							<p class="centered">Use cssnano to optimize your CSS:</p>
+							<pre><code class="bash">npm install -g cssnano-cli
+cssnano styles.css styles.optimized.css</code></pre>
+						</div>
+						<div class="fragment">
+							<p class="centered">Use csscss to find redundancies:</p>
+							<pre><code class="bash">gem install csscss
+csscss --verbose --no-match-shorthand styles.css</code></pre>
+						</div>
+					</section>
+					<!-- [6.8] Check Code Coverage -->
+					<section>
+						<h2>Check Code Coverage</h2>
+						<h4>Chrome Dev Tools</h4>
+						<img class="big fragment" src="img/coverage-summary.png">
+						<img class="fragment" src="img/coverage-deep-dive.png">
+					</section>
+				</section>
+				<!-- [7.0] -->
+				<section>
+					<!-- [7.1] -->
+					<section>
 					</section>
 				</section>
 			</div>
@@ -501,5 +624,6 @@ sitespeed.io -b chrome -n 25 -d 1 -m 1 -c custom --latency 50 --downstreamKbps 7
 				]
 			});
 		</script>
+		<script src="js/timings.js" async defer></script>
 	</body>
 </html>
