@@ -78,7 +78,7 @@ $heading6Size: .6em;
 		}
 
 		h3{
-			& + .fragment{
+			& + pre.fragment{
 				margin: 1em 0 0;
 			}
 		}
