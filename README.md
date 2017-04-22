@@ -4,7 +4,7 @@ by [Jeremy Wagner](https://jeremywagner.me) ([@malchata](https://twitter.com/mal
 
 Yet another one of my talks, except this one is on web performance, and what you can do to be a performance advocate before sites get into prod (as well as what you can do if you have slow sites in production).
 
-If you want to run this talk locally, just clone this repo and spin up the little server by typing `node http.js` and a local server will spin up at (http://localhost:8080).
+If you want to run this talk locally, just clone this repo and spin up the little server by typing `node http.js` and a local server will spin up at http://localhost:8080.
 
 ## Talk dates:
 **22 April, 2017:** [Twin Cities Code Camp 21](https://twincitiescodecamp.com/#/Events/21/talks)
