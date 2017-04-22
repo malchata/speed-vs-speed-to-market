@@ -112,6 +112,10 @@ $heading6Size: .6em;
 			max-width: 55%;
 		}
 
+		.smallest{
+			max-width: percentage(1 / 3);
+		}
+
 		.big{
 			width: 100%;
 			max-width: none;

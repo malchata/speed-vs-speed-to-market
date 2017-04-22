@@ -78,6 +78,7 @@
 					[7.3] Resources Pt. II
 					[7.4] Resources Pt. III
 					[7.5] The End
+					[7.6] Book Plug
 			-->
 			<div class="slides">
 				<!-- [0.0] Title Card -->
@@ -102,7 +103,7 @@
 							<p class="centered fragment">Roughly the size of your thumb</p>
 							<p class="centered fragment">.63 cm (.25 in) stinger</p>
 							<p class="centered fragment">Sting can dissolve human tissue</p>
-							<p class="centered fragment">Leaves pheremones to alert other hornets</p>
+							<p class="centered fragment">Leaves pheromones to alert other hornets</p>
 							<p class="centered fragment">Top speed of 40 km/h (25 mph)</p>
 					</section>
 					<!-- [1.4] Giant Hornets Love Honeybees -->
@@ -426,7 +427,7 @@
 					<!-- [4.6] Ask Yourself -->
 					<section>
 						<h2>Ask yourself</h2>
-						<p class="centered fragment">Am I overengineering a solution?</p>
+						<p class="centered fragment">Am I over-engineering a solution?</p>
 						<p class="centered fragment">Do I need [JS library] when in-browser methods exist?</p>
 						<p class="centered fragment">Do I even need a CSS framework?</p>
 					</section>
@@ -476,7 +477,7 @@ sitespeed.io -b chrome -n 25 -d 1 -m 1 -c custom --latency 50 --downstreamKbps 7
 					<section>
 						<h3>Dev Testing (Hard Mode)</h3>
 						<img class="big" src="img/grafana.png" alt="Grafana" title="Grafana">
-						<h4>sitespeed.io + Graphite + Grafana</h4>
+						<h4>sitespeed.io &amp; Graphite + Grafana</h4>
 					</section>
 					<!-- [5.7] Real User Monitoring -->
 					<section>
@@ -563,10 +564,12 @@ find ./ -type f -name '*.svg' -exec svgo {} \;</code></pre>
 						<div class="fragment">
 							<p class="centered">Use <code>preconnect</code> to open connections to other servers ahead of time:</p>
 							<pre><code class="http">Link: &lt;https://cdnjs.com&gt;; rel=preconnect; crossorigin</code></pre>
+							<pre><code class="html">&lt;link rel=&quot;preconnect&quot; rel=&quot;https://cdnjs.com&quot; crossorigin&gt;</code></pre>
 						</div>
 						<div class="fragment">
 							<p class="centered">Give the browser a head start on loading assets with <code>preload</code>:</p>
 							<pre><code class="http">Link: &lt;/css/styles.css&gt;; rel=preload; as=style</code></pre>
+							<pre><code class="html">&lt;link rel=&quot;preload&quot; href=&quot;/css/styles.css&quot; as=&quot;style&quot;&gt;</code></pre>
 						</div>
 					</section>
 					<!-- [6.7] Prune Your CSS -->
@@ -587,9 +590,11 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 					<section>
 						<h2>Segment your CSS</h2>
 						<p class="centered fragment">Large, monolithic stylesheets are perfect candidates</p>
-						<p class="centered fragment">Keep one stylesheet with global CSS and place template-specific CSS into separate style sheets</p>
+						<div class="fragment">
+							<p class="centered">Keep one stylesheet with global CSS and place template-specific CSS into separate style sheets</p>
+							<img src="img/segment-css.png" alt="Segmented CSS" title="Segmented CSS">
+						</div>
 						<p class="centered fragment">If only one instance of a specific template exists, considering inlining its CSS</p>
-						<img class="fragment" src="img/segment-css.png" alt="Segmented CSS" title="Segmented CSS">
 					</section>
 					<!-- [6.9] Check Code Coverage -->
 					<section>
@@ -609,7 +614,7 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 					<!-- [7.2] Resources Pt. I -->
 					<section>
 						<h2>Resources</h2>
-						<p class="centered fragment">
+						<p class="centered">
 							More about Giant Hornets:<br>
 							<a href="https://a-z-animals.com/animals/asian-giant-hornet/" target="_blank" rel="noopener">a-z-animals.com/animals/asian-giant-hornet</a>
 						</p>
@@ -625,13 +630,14 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 					<!-- [7.3] Resources Pt. II -->
 					<section>
 						<h2>More resources</h2>
-						<p class="centered fragment">
+						<p class="centered">
 							sitespeed.io:<br>
 							<a href="https://www.sitespeed.io" target="_blank" rel="noopener">sitespeed.io</a>
 						</p>
 						<p class="centered fragment">
 							Bulk image optimization in bash:<br>
-							<a href="https://jeremywagner.me/blog/bulk-image-optimization-in-bash" target="_blank" rel="noopener">jeremywagner.me/blog/bulk-image-optimization-in-bash</a>
+							<a href="https://jeremywagner.me/blog/bulk-image-optimization-in-bash/" target="_blank" rel="noopener">jeremywagner.me/blog/bulk-image-optimization-in-bash</a><br>
+							<a href="https://jeremywagner.me/blog/faster-bulk-image-optimization-in-bash/" target="_blank" rel="noopener">jeremywagner.me/blog/faster-bulk-image-optimization-in-bash</a>
 						</p>
 						<p class="centered fragment">
 							Resource hints specification:<br>
@@ -659,6 +665,12 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 						<h1>The End</h1>
 						<h4>Thank you!</h4>
 						<h5>twitter: <a href="https://twitter.com/malchata" target="_blank" rel="noopener">@malchata</a>&nbsp;&nbsp;|&nbsp;&nbsp;Blog: <a href="https://jeremywagner.me" target="_blank" rel="noopener">jeremywagner.me</a></h5>
+					</section>
+					<!-- [7.6] Book Plug -->
+					<section>
+						<h2>Web Performance in Action</h2>
+						<img class="smallest" src="img/web-perf-in-action.jpg" alt="Web Performance in Action" title="Web Performance in Action">
+						<h4>Save 42% with code <code>sswagner</code></h4>
 					</section>
 				</section>
 			</div>
