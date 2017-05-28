@@ -9,7 +9,7 @@ If you want to run this talk locally, just clone this repo, `cd` into its direct
 ## Talk dates:
 ~~**22 April, 2017:** [Twin Cities Code Camp 21](https://twincitiescodecamp.com/#/Events/21/talks)~~
 
-**6-7 June, 2017** [Prairie Dev Con](http://prairiedevcon.com/Sessions)
+**6 June, 2017** [Prairie Dev Con](http://prairiedevcon.com/Sessions)
 
 **8 June, 2017** [Open Source North](http://opensourcenorth.com/)
 
