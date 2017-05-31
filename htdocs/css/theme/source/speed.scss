@@ -91,6 +91,18 @@ $heading6Size: .6em;
 			font-size: $heading6Size;
 		}
 
+        blockquote{
+            background: none;
+            color: $headingColor;
+            text-align: left;
+            width: 80%;
+
+			q{
+				text-align: right;
+				display: block;
+			}
+        }
+
 		img,
 		video{
 			border: 0;

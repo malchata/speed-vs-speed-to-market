@@ -4,7 +4,7 @@
   "description": "Web Performance talk!",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "presentation": "node http.js"
   },
   "repository": {
     "type": "git",
@@ -17,15 +17,17 @@
   },
   "homepage": "https://github.com/malchata/speed-vs-speed-to-market#readme",
   "dependencies": {
-    "autoprefixer": "^6.7.7",
-    "autorem": "^0.1.1",
     "compression": "^1.6.2",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "autorem": "^0.1.1",
     "cssnano": "^3.10.0",
-    "express": "^4.15.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-livereload": "^3.8.1",
     "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.4.0",
+    "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8"
   }
