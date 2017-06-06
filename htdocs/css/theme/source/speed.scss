@@ -1,6 +1,5 @@
 /**
- * Speed vs. Speed to Market talk theme.
- *
+ * Speed vs. Speed to Market presentation CSS.
  * By Jeremy Wagner, https://jeremywagner.me
  */
 
@@ -102,6 +101,26 @@ $heading6Size: .6em;
 				display: block;
 			}
         }
+
+		ul{
+			align-self: center;
+			list-style: none;
+
+			li{
+				margin: 0 0 1em;
+
+				&:last-child{
+					margin: 0;
+				}
+			}
+		}
+
+		li{
+			font-family: $mainFont;
+			font-weight: 600;
+			font-size: .75em;
+			line-height: 1.2;
+		}
 
 		img,
 		video{
