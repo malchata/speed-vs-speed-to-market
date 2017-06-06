@@ -53,7 +53,6 @@ $heading6Size: .6em;
 	section{
 		a{
 			color: $blue;
-			text-decoration: underline;
 
 			&:hover{
 				color: $blue;
@@ -84,6 +83,10 @@ $heading6Size: .6em;
 
 		h5{
 			font-size: $heading5Size;
+
+            & + h6{
+                margin-top: 1em;
+            }
 		}
 
 		h6{
@@ -131,7 +134,7 @@ $heading6Size: .6em;
 		}
 
 		video{
-			max-width: 85%;
+			max-width: 75%;
 			width: 100%;
 
 			& + h4{
