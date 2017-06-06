@@ -6,7 +6,6 @@
 		</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="lib/css/zenburn.css">
 		<link rel="stylesheet" href="css/theme/speed.css">
 		<script>
 			var link = document.createElement("link");
@@ -176,12 +175,14 @@
 						<h4>Average Total Page Size<span class="invisible"> vs</span></h4>
 						<h4 class="invisible">Average Internet Speed (North America)</h4>
 						<img src="/img/speed-graph.png" alt="Average Total Page Size">
+						<h6>Source: <a href="http://httparchive.org" rel="noopener">httparchive.org</a><span class="invisible">, <a href="https://www.akamai.com/us/en/about/our-thinking/state-of-the-internet-report/global-state-of-the-internet-connectivity-reports.jsp" rel="noopener">Akamai State of the Internet report</a></span></h6>
 					</section>
 					<!-- [2.3] Average Internet Speeds (USA) -->
 					<section>
 						<h4>Average Total Page Size vs</h4>
 						<h4>Average Internet Speed (North America)</h4>
 						<img src="/img/speed-graph-complete.png" alt="Average Total Page Size vs Average Internet Speed (North America)">
+						<h6>Source: <a href="http://httparchive.org" rel="noopener">httparchive.org</a>, <a href="https://www.akamai.com/us/en/about/our-thinking/state-of-the-internet-report/global-state-of-the-internet-connectivity-reports.jsp" rel="noopener">Akamai State of the Internet report</a></h6>
 					</section>
 					<!-- [2.4] How Big is DOOM? -->
 					<section>
@@ -251,7 +252,7 @@
 					</section>
 					<!-- [3.6] Crucial Questions to Ask -->
 					<section>
-						<h2>Crucial questions to ask:</h2>
+						<h2>Crucial questions to ask</h2>
 						<p class="centered fragment">&quot;Who am I developing for?&quot;</p>
 						<p class="centered fragment">&quot;How fast is the internet for my users?&quot;</p>
 					</section>
@@ -568,7 +569,7 @@ find ./ -type f -name '*.svg' -exec svgo {} \;</code></pre>
 					</section>
 					<!-- [6.3] A Quick Image Optimization Test Case Pt. I -->
 					<section>
-						<h3>A Quick Test Case:</h3>
+						<h3>A Quick Test Case</h3>
 						<p class="centered fragment">A Wordpress-powered recipe website with <u>493</u> JPEG images (36.5 MB total)</p>
 						<pre class="fragment" style="margin: 2rem auto;"><code class="bash">find ./ -type f -name '*.jpg' -exec jpeg-recompress --min 30 --max 70 --strip --method smallfry --loops 12 --accurate {} {} \;</code></pre>
 						<p class="centered fragment">with jpeg-recompress, image library size was reduced <u>72%</u> to <u>10.2 MB</u> in approximately <u>3 minutes</u> of CPU time</p>
