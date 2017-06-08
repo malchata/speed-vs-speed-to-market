@@ -29,6 +29,8 @@ const buildCSS = ()=>{
 		.pipe(livereload());
 };
 
+exports.buildCSS = buildCSS;
+
 // HTML Task (Triggers Reloading Only)
 const reloadPage = ()=>{
 	let src = "htdocs/index.html";
