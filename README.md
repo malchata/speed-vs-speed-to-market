@@ -11,6 +11,8 @@ If you want to run this talk locally, just clone this repo, `cd` into its direct
 
 ~~**6 June, 2017** [Prairie Dev Con](http://prairiedevcon.com/Sessions)~~
 
-**8 June, 2017** [Open Source North](http://opensourcenorth.com/)
+~~**8 June, 2017** [Open Source North](http://opensourcenorth.com/)~~
+
+**31 October/1 November, 2017**~~ [CodeFrontEnd](http://codefrontend.co.uk/)
 
 If you like this talk and want to book me for your conference, email me at [public@jeremywagner.me](public@jeremywagner.me) or tweet me [@malchata](https://twitter.com/malchata).
