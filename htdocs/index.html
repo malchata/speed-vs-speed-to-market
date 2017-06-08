@@ -7,21 +7,13 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/speed.css">
-		<script>
-			var link = document.createElement("link");
-			link.rel = "stylesheet";
-			link.type = "text/css";
-			link.href = window.location.search.match( /print-pdf/gi ) ? "css/print/pdf.css" : "css/print/paper.css";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		</script>
 	</head>
 	<body class="speed-vs-speed-to-market">
 		<div class="reveal">
 			<!-- Table of Contents
 				[0.0] Opener
 					[0.1] Title Card
-					[0.2] Sponsors (Prairie Dev Con)
-					[0.3] A Little Introduction
+					[0.2] A Little Introduction
 				[1.0] Hornets and Japanese Honeybees
 					[1.1] On Hornets and Honeybees
 					[1.2] Meet the Asian Giant Hornet
@@ -92,16 +84,12 @@
 						<h5>twitter: <a href="https://twitter.com/malchata" rel="noopener">@malchata</a>&nbsp;&nbsp;&mdash;&nbsp;&nbsp;Blog: <a href="https://jeremywagner.me" rel="noopener">jeremywagner.me</a></h5>
 						<h6>Slides: <a href="http://bit.ly/speed-vs-speed" rel="noopener">bit.ly/speed-vs-speed</a></h6>
 					</section>
-					<!-- [0.2] Sponsors (Prairie Dev Con) -->
-					<section data-background-color="#fff">
-						<img src="/img/sponsors.png" alt="PrDC Sponsors" title="PrDC Sponsors" class="no-shadow">
-					</section>
-					<!-- [0.3] A Little Introduction -->
+					<!-- [0.2] A Little Introduction -->
 					<section>
 						<h3>Hi, I'm Jeremy</h3>
 						<div class="flex-image-container">
 							<div>
-								<img src="/img/cartoon-dog.jpg" alt="High-fiving a cartoon dog" title="High-fiving a cartoon dog" class="big">
+								<img data-src="/img/cartoon-dog.jpg" alt="High-fiving a cartoon dog" title="High-fiving a cartoon dog" class="big">
 							</div>
 							<ul class="left">
 								<li class="fragment">I work for General Mills in Minnesota (Canada Junior)</li>
@@ -119,7 +107,7 @@
 					</section>
 					<!-- [1.2] Meet the Asian Giant Hornet -->
 					<section>
-						<img src="/img/hornet-on-hand.jpg" alt="Meet the Asian Giant Hornet" title="Meet the Asian Giant Hornet">
+						<img data-src="/img/hornet-on-hand.jpg" alt="Meet the Asian Giant Hornet" title="Meet the Asian Giant Hornet">
 						<h4>Meet the Asian Giant Hornet</h4>
 					</section>
 					<!-- [1.3] Giant Hornet Stats -->
@@ -133,7 +121,7 @@
 					</section>
 					<!-- [1.4] Giant Hornets Love Honeybees -->
 					<section>
-						<img src="/img/hornet-honeybee.jpg" title="Giant Hornets Love Honeybees" alt="Giant Hornets Love Honeybees">
+						<img data-src="/img/hornet-honeybee.jpg" title="Giant Hornets Love Honeybees" alt="Giant Hornets Love Honeybees">
 						<h3>Giant Hornets Love Honeybees</h3>
 					</section>
 					<!-- [1.5] Giant Hornets Don't Mess Around -->
@@ -148,12 +136,12 @@
 					</section>
 					<!-- [1.7] The Horney Scout Arrives -->
 					<section>
-						<img src="/img/hornet-scout.jpg" title="The Scout Arrives" alt="The Scout Arrives">
+						<img data-src="/img/hornet-scout.jpg" title="The Scout Arrives" alt="The Scout Arrives">
 						<h3>The hornet scout arrives</h3>
 					</section>
 					<!-- [1.8] The Scout is Engulfed -->
 					<section>
-						<img src="/img/bee-ball.jpg" title="The Scout Arrives" alt="The Scout Arrives">
+						<img data-src="/img/bee-ball.jpg" title="The Scout Arrives" alt="The Scout Arrives">
 						<h3>The scout is engulfed</h3>
 						<h4 class="fragment">(and cooked alive)</h4>
 					</section>
@@ -174,20 +162,20 @@
 					<section>
 						<h4>Average Total Page Size<span class="invisible"> vs</span></h4>
 						<h4 class="invisible">Average Internet Speed (North America)</h4>
-						<img src="/img/speed-graph.png" alt="Average Total Page Size">
+						<img data-src="/img/speed-graph.png" alt="Average Total Page Size">
 						<h6>Source: <a href="http://httparchive.org" rel="noopener">httparchive.org</a><span class="invisible">, <a href="https://www.akamai.com/us/en/about/our-thinking/state-of-the-internet-report/global-state-of-the-internet-connectivity-reports.jsp" rel="noopener">Akamai State of the Internet report</a></span></h6>
 					</section>
 					<!-- [2.3] Average Internet Speeds (USA) -->
 					<section>
 						<h4>Average Total Page Size vs</h4>
 						<h4>Average Internet Speed (North America)</h4>
-						<img src="/img/speed-graph-complete.png" alt="Average Total Page Size vs Average Internet Speed (North America)">
+						<img data-src="/img/speed-graph-complete.png" alt="Average Total Page Size vs Average Internet Speed (North America)">
 						<h6>Source: <a href="http://httparchive.org" rel="noopener">httparchive.org</a>, <a href="https://www.akamai.com/us/en/about/our-thinking/state-of-the-internet-report/global-state-of-the-internet-connectivity-reports.jsp" rel="noopener">Akamai State of the Internet report</a></h6>
 					</section>
 					<!-- [2.4] How Big is DOOM? -->
 					<section>
 						<h2>How big is DOOM?</h2>
-						<img src="/img/doom-diskettes.jpg" alt="DOOM Shareware" title="DOOM Shareware">
+						<img data-src="/img/doom-diskettes.jpg" alt="DOOM Shareware" title="DOOM Shareware">
 						<div class="fragment">
 							<h4>Installer size:</h4>
 							<h2><u>2.39 MB</u></h2>
@@ -228,8 +216,8 @@
 					<section>
 						<h3>What's the worst that could happen?</h3>
 						<div class="fragment">
-							<img class="big" src="/img/the-worst.png" alt="The Worst" title="The Worst">
-							<img src="/img/the-worst-pt-2.png" alt="The Worst Pt. II" title="The Worst Part. II">
+							<img class="big" data-src="/img/the-worst.png" alt="The Worst" title="The Worst">
+							<img data-src="/img/the-worst-pt-2.png" alt="The Worst Pt. II" title="The Worst Part. II">
 						</div>
 					</section>
 					<!-- [3.3] Web Performance is a User Experience Problem -->
@@ -241,7 +229,7 @@
 					<!-- [3.4] Until a Page Loads... -->
 					<section>
 						<h3>Until first paint...</h3>
-						<img class="no-shadow" src="/img/blank-browser.png" alt="Blank browser window" title="Blank browser window">
+						<img class="no-shadow" data-src="/img/blank-browser.png" alt="Blank browser window" title="Blank browser window">
 						<h2 class="fragment">There is <u>no</u> user experience</h2>
 					</section>
 					<!-- [3.5] We've Become Disconnected From our Users -->
@@ -267,8 +255,8 @@
 							Different Experiences
 						</h2>
 						<div class="flex-image-container">
-							<img class="fragment" src="/img/guy-on-mac.jpg" alt="Guy on MacBook" title="Guy on MacBook">
-							<img class="fragment" src="/img/guy-on-phone.jpg" alt="Guy on Phone" title="Guy on Phone">
+							<img class="fragment" data-src="/img/guy-on-mac.jpg" alt="Guy on MacBook" title="Guy on MacBook">
+							<img class="fragment" data-src="/img/guy-on-phone.jpg" alt="Guy on Phone" title="Guy on Phone">
 						</div>
 					</section>
 					<!-- [3.9] How Fast is the Internet for my Users? -->
@@ -278,7 +266,7 @@
 					<!-- [3.10] Mobile May Be Slower Than You Think -->
 					<section>
 						<h3>Mobile may be slower than you think</h3>
-						<img class="fragment" src="/img/not-so-lte.jpg" alt="Not so LTE" title="Not so LTE">
+						<img class="fragment" data-src="/img/not-so-lte.jpg" alt="Not so LTE" title="Not so LTE">
 					</section>
 					<!-- [3.11] Make Data-driven Decisions -->
 					<section>
@@ -290,7 +278,7 @@
 					<!-- [3.12] Connectivity Index -->
 					<section>
 						<video autoplay loop muted preload>
-							<source src="video/cindex.webm" type="video/webm">
+							<source data-src="video/cindex.webm" type="video/webm">
 						</video>
 						<h4><a href="https://cindex.co" rel="noopener">cindex.co</a></h4>
 					</section>
@@ -500,7 +488,7 @@
 					<!-- [5.4] Dev Testing (Easy Mode) -->
 					<section>
 						<h3>Dev Testing (Easy Mode)</h3>
-						<img class="smaller" src="/img/dev-tools.png" alt="Chrome Dev Tools" title="Chrome Dev Tools">
+						<img class="smaller" data-src="/img/dev-tools.png" alt="Chrome Dev Tools" title="Chrome Dev Tools">
 						<h4>Chrome Dev Tools</h4>
 					</section>
 					<!-- [5.5] Dev Testing (Normal Mode) -->
@@ -513,7 +501,7 @@ sitespeed.io -b chrome -n 25 -d 1 -m 1 -c custom --latency 50 --downstreamKbps 7
 					<!-- [5.6] Dev Testing (Hard Mode) -->
 					<section>
 						<h3>Dev Testing (Hard Mode)</h3>
-						<img class="big" src="/img/grafana.png" alt="Grafana" title="Grafana">
+						<img class="big" data-src="/img/grafana.png" alt="Grafana" title="Grafana">
 						<h4>sitespeed.io &amp; Graphite + Grafana</h4>
 					</section>
 					<!-- [5.7] Real User Monitoring -->
@@ -530,11 +518,11 @@ sitespeed.io -b chrome -n 25 -d 1 -m 1 -c custom --latency 50 --downstreamKbps 7
 						<h2>Browser Support</h2>
 						<div class="flex-image-container extra-wide">
 							<div>
-								<img class="big" src="/img/navigation-timing-api.png" alt="Navigation Timing API" title="Navigation Timing API">
+								<img class="big" data-src="/img/navigation-timing-api.png" alt="Navigation Timing API" title="Navigation Timing API">
 								<h4>Navigation Timing API</h4>
 							</div>
 							<div>
-								<img class="big" src="/img/resource-timing-api.png" alt="Resource Timing API" title="Resource Timing API">
+								<img class="big" data-src="/img/resource-timing-api.png" alt="Resource Timing API" title="Resource Timing API">
 								<h4>Resource Timing API</h4>
 							</div>
 						</div>
@@ -580,12 +568,12 @@ find ./ -type f -name '*.svg' -exec svgo {} \;</code></pre>
 						<div class="flex-image-container">
 							<div>
 								<h4>Unoptimized</h4>
-								<img src="/img/image-test-case-unoptimized.jpg" alt="Unoptimized Image Test Case" title="Unoptimized Image Test Case">
+								<img data-src="/img/image-test-case-unoptimized.jpg" alt="Unoptimized Image Test Case" title="Unoptimized Image Test Case">
 								<h4>182 KB</h4>
 							</div>
 							<div>
 								<h4>Optimized</h4>
-								<img src="/img/image-test-case-optimized.jpg" alt="Optimized Image Test Case" title="Optimized Image Test Case">
+								<img data-src="/img/image-test-case-optimized.jpg" alt="Optimized Image Test Case" title="Optimized Image Test Case">
 								<h4>25 KB (-86%)</h4>
 							</div>
 						</div>
@@ -593,7 +581,7 @@ find ./ -type f -name '*.svg' -exec svgo {} \;</code></pre>
 					<!-- [6.5] A Quick Image Optimization Test Case Pt. III -->
 					<section>
 						<h3>Image Optimization <u>Works</u></h3>
-						<img class="big" src="/img/image-test-case-result.png" alt="Results of Image Optimization in Test Case" title="Results of Image Optimization in Test Case">
+						<img class="big" data-src="/img/image-test-case-result.png" alt="Results of Image Optimization in Test Case" title="Results of Image Optimization in Test Case">
 					</section>
 					<!-- [6.6] Use Resource Hints -->
 					<section>
@@ -629,7 +617,7 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 						<p class="centered fragment">Large, monolithic stylesheets are perfect candidates</p>
 						<div class="fragment">
 							<p class="centered">Keep one stylesheet with global CSS and place template-specific CSS into separate style sheets</p>
-							<img src="/img/segment-css.png" alt="Segmented CSS" title="Segmented CSS">
+							<img data-src="/img/segment-css.png" alt="Segmented CSS" title="Segmented CSS">
 						</div>
 						<p class="centered fragment">If only one instance of a specific template exists, considering inlining its CSS</p>
 					</section>
@@ -637,8 +625,8 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 					<section>
 						<h2>Check Code Coverage</h2>
 						<h4>with Chrome Dev Tools</h4>
-						<img class="big fragment" src="/img/coverage-summary.png">
-						<img class="fragment" src="/img/coverage-deep-dive.png">
+						<img class="big fragment" data-src="/img/coverage-summary.png">
+						<img class="fragment" data-src="/img/coverage-deep-dive.png">
 					</section>
 				</section>
 				<!-- [7.0] Conclusion -->
@@ -707,7 +695,7 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 					<section>
 						<h2>Web Performance in Action</h2>
 						<h4><a href="https://www.manning.com/books/web-performance-in-action?a_aid=webopt&a_bid=63c31090" rel="noopener">jeremywagner.me/book</a><h4>
-						<img class="smallest" src="/img/web-perf-in-action.jpg" alt="Web Performance in Action" title="Web Performance in Action">
+						<img class="smallest" data-src="/img/web-perf-in-action.jpg" alt="Web Performance in Action" title="Web Performance in Action">
 						<h4>Save 42% with code <code>sswagner</code></h4>
 					</section>
 				</section>
@@ -722,6 +710,7 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 				transition: "fade",
 				progress: false,
 				help: false,
+				viewDistance: 2,
 				dependencies: [
 					{
 						src: "plugin/notes/notes.js",
