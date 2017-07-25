@@ -15,6 +15,8 @@ If you want to run this talk locally, *fiiine*. 🙄 Just clone this repo, `cd` 
 
 ~~**8 June, 2017** [Open Source North](http://opensourcenorth.com/)~~
 
-**31 October/1 November, 2017** [CodeFrontEnd](http://codefrontend.co.uk/)
+**28 July, 2017** General Mills Code Camp v9.0 (Closed Event)
 
-If you like this talk and want to book me for your conference, email me at [public@jeremywagner.me](public@jeremywagner.me) or tweet me [@malchata](https://twitter.com/malchata).
+**31 October/1 November, 2017** [CodeFrontEnd](http://www.codefrontend.co.uk/speaker/jeremy-wagner/)
+
+If you like this talk and want to book me for your conference, email me at [jeremy.wagner@gmail.com](public@jeremywagner.me) or tweet me [@malchata](https://twitter.com/malchata).
