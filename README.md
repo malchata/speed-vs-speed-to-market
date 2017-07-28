@@ -15,7 +15,7 @@ If you want to run this talk locally, *fiiine*. 🙄 Just clone this repo, `cd` 
 
 ~~**8 June, 2017** [Open Source North](http://opensourcenorth.com/)~~
 
-**28 July, 2017** General Mills Code Camp v9.0 (Closed Event)
+~~**28 July, 2017** General Mills Code Camp v9.0 (Closed Event)~~
 
 **31 October/1 November, 2017** [CodeFrontEnd](http://www.codefrontend.co.uk/speaker/jeremy-wagner/)
 

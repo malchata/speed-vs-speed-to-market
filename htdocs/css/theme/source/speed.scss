@@ -84,26 +84,27 @@ $heading6Size: .6em;
 		h5{
 			font-size: $heading5Size;
 
-            & + h6{
-                margin-top: 1em;
-            }
+			& + h6{
+				margin-top: 1em;
+			}
 		}
 
 		h6{
 			font-size: $heading6Size;
 		}
 
-        blockquote{
-            background: none;
-            color: $headingColor;
-            text-align: left;
-            width: 80%;
+		blockquote{
+			background: none;
+			color: $headingColor;
+			text-align: left;
+			width: 90%;
 
 			q{
 				text-align: right;
 				display: block;
+				word-break: keep-all;
 			}
-        }
+		}
 
 		ul{
 			align-self: center;

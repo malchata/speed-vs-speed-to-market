@@ -42,9 +42,10 @@
 					[3.7] Who Am I Developing For?
 					[3.8] Different Users Have Different Experiences
 					[3.9] How Fast is the Internet for my Users?
-					[3.10] Mobile May be Slower Than You Think
-					[3.11] Make Data-driven Decisions
-					[3.12] Connectivity Index
+					[3.10] Pew Research Poll
+					[3.11] Mobile May be Slower Than You Think
+					[3.12] Make Data-driven Decisions
+					[3.13] Connectivity Index
 				[4.0] Limit Developer Conveniences
 					[4.1] Developer Convenience vs User Experience
 					[4.2] Said Better by Estelle
@@ -92,7 +93,6 @@
 								<img data-src="img/cartoon-dog.jpg" alt="High-fiving a cartoon dog" title="High-fiving a cartoon dog" class="big">
 							</div>
 							<ul class="left">
-								<li class="fragment">I work for General Mills in Minnesota (Canada Junior)</li>
 								<li class="fragment">I <a href="https://www.manning.com/books/web-performance-in-action?a_aid=webopt&a_bid=63c31090" rel="noopener">wrote a book</a> for Manning last year on web performance (giveaway at the end of the talk!)</li>
 								<li class="fragment">Hobbies include writing, guitar, running, and high-fiving cartoon dogs</li>
 							</ul>
@@ -192,11 +192,11 @@
 					<!-- [2.6] How it All Goes Down -->
 					<section>
 						<h2>How it all goes down</h2>
-						<p class="centered fragment">Project funding/contract procured</p>
-						<p class="centered fragment">Timeline/project greenlit set</p>
+						<p class="centered fragment">Timeline set/project greenlit</p>
 						<p class="centered fragment">IA and design created</p>
 						<p class="centered fragment">Development begins</p>
-						<p class="centered fragment">Site launches</p>
+						<p class="centered fragment">Testing and QA occurs</p>
+						<p class="centered fragment">Site goes to prod</p>
 						<p class="centered fragment">Client finds performance problems</p>
 						<p class="centered fragment">Everyone's unhappy</p>
 					</section>
@@ -263,19 +263,26 @@
 					<section>
 						<h2>&quot;How fast is the internet for my users?&quot;</h2>
 					</section>
-					<!-- [3.10] Mobile May Be Slower Than You Think -->
+					<!-- [3.10] Pew Research Poll -->
+					<section>
+						<blockquote cite="https://www.technologyreview.com/s/603083/the-unacceptable-persistence-of-the-digital-divide/">
+							&quot;A survey by Pew Research shows that fully one-third of American adults do not subscribe to any Internet access faster than dial-up at their home at a time when many basic tasks—finding job listings, doing homework, obtaining social services, and even performing many jobs—require being online.&quot;
+							<q>&mdash; <a href="https://www.technologyreview.com/s/603083/the-unacceptable-persistence-of-the-digital-divide/" rel="noopener">The Unacceptable Persistence of the Digital Divide</a></q>
+						</blockquote>
+					</section>
+					<!-- [3.11] Mobile May Be Slower Than You Think -->
 					<section>
 						<h3>Mobile may be slower than you think</h3>
 						<img class="fragment" data-src="img/not-so-lte.jpg" alt="Not so LTE" title="Not so LTE">
 					</section>
-					<!-- [3.11] Make Data-driven Decisions -->
+					<!-- [3.12] Make Data-driven Decisions -->
 					<section>
 						<h2>Make Data-driven Decisions</h2>
 						<p class="centered fragment">Google Analytics</p>
 						<p class="centered fragment">HTTP Archive</p>
 						<p class="centered fragment">Akamai State of the Internet Connectivity Report</p>
 					</section>
-					<!-- [3.12] Connectivity Index -->
+					<!-- [3.13] Connectivity Index -->
 					<section>
 						<video autoplay loop muted preload>
 							<source data-src="video/cindex.webm" type="video/webm">
@@ -293,9 +300,9 @@
 					</section>
 					<!-- [4.2] Said Better by Estelle Weyl -->
 					<section>
-						<blockquote>
+						<blockquote cite="https://twitter.com/estellevw/status/851430155830439937">
 							&quot;Remember it's about user experience, not developer experience. Performance matters!&quot;
-							<q>&mdash; Estelle Weyl</q>
+							<q>&mdash; <a href="https://twitter.com/estellevw/status/851430155830439937" rel="noopener">Estelle Weyl</a></q>
 						</blockquote>
 					</section>
 					<!-- [4.3] CSS Framework Overhead -->
@@ -481,9 +488,9 @@
 					<!-- [5.3] Tips for Testing -->
 					<section>
 						<h2>Testing Tips</h2>
-						<p class="centered fragment">Test multiple times in a session to build average metrics</p>
 						<p class="centered fragment">Use a throttling profile to simulate actual connections</p>
 						<p class="centered fragment">Build throttling profiles based on real data</p>
+						<p class="centered fragment">Test multiple times in a session to build average metrics</p>
 					</section>
 					<!-- [5.4] Dev Testing (Easy Mode) -->
 					<section>
@@ -559,7 +566,14 @@ find ./ -type f -name '*.svg' -exec svgo {} \;</code></pre>
 					<section>
 						<h3>A Quick Test Case</h3>
 						<p class="centered fragment">A Wordpress-powered recipe website with <u>493</u> JPEG images (36.5 MB total)</p>
-						<pre class="fragment" style="margin: 2rem auto;"><code class="bash">find ./ -type f -name '*.jpg' -exec jpeg-recompress --min 30 --max 70 --strip --method smallfry --loops 12 --accurate {} {} \;</code></pre>
+						<pre class="fragment" style="margin: 2rem auto;"><code class="bash">find ./ -type f -name '*.jpg' -exec \
+jpeg-recompress \
+--min 30 \
+--max 70 \
+--strip \
+--method smallfry \
+--loops 12 \
+--accurate {} {} \;</code></pre>
 						<p class="centered fragment">with jpeg-recompress, image library size was reduced <u>72%</u> to <u>10.2 MB</u> in approximately <u>3 minutes</u> of CPU time</p>
 					</section>
 					<!-- [6.4] A Quick Image Optimization Test Case Pt. II -->
@@ -614,12 +628,12 @@ csscss --verbose --no-match-shorthand styles.css</code></pre>
 					<!-- [6.8] Segment Your CSS -->
 					<section>
 						<h2>Segment your CSS</h2>
-						<p class="centered fragment">Large, monolithic stylesheets are perfect candidates</p>
+						<p class="centered fragment">Large, monolithic stylesheets are great candidates</p>
 						<div class="fragment">
 							<p class="centered">Keep one stylesheet with global CSS and place template-specific CSS into separate style sheets</p>
 							<img data-src="img/segment-css.png" alt="Segmented CSS" title="Segmented CSS">
 						</div>
-						<p class="centered fragment">If only one instance of a specific template exists, considering inlining its CSS</p>
+						<p class="centered fragment">If a specific template is only used on one page, (maybe) considering inlining its CSS</p>
 					</section>
 					<!-- [6.9] Check Code Coverage -->
 					<section>
